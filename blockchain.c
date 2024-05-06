@@ -125,9 +125,11 @@ int main() {
     Blockchain chain = {NULL};
     unsigned char genesisHash[SHA256_DIGEST_LENGTH] = {0};
     printf("-----------------------\n");
-    printf("usage:\n   enter 'p' to print blockchain\n" 
-                    "   enter 'g' to generate block\n" 
-                    "   enter 'q' to quit\n");
+    printf( "usage:\n   enter 'p' to print blockchain\n" 
+            "   enter 'g' to generate block\n" 
+            "   enter 'v' to rehash the block and validate the block\n" 
+            "   enter 'm' to modify the data of the specific block(may invalidate blockchain)\n" 
+            "   enter 'q' to quit\n");
     printf("-----------------------\n");
     while (1)
     {
@@ -192,6 +194,8 @@ int main() {
             printf("-----------------------\n");
             printf("usage:\n   enter 'p' to print blockchain\n" 
                     "   enter 'g' to generate block\n" 
+                    "   enter 'v' to rehash the block and validate the block\n" 
+                    "   enter 'm' to modify the data of the specific block(may invalidate blockchain)\n" 
                     "   enter 'q' to quit\n");
             printf("-----------------------\n");
         }

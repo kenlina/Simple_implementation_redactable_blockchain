@@ -249,9 +249,12 @@ int main() {
         }
         else{
             printf("-----------------------\n");
-            printf("usage:\n   enter 'p' to print blockchain\n" 
-                    "   enter 'g' to generate block\n" 
-                    "   enter 'q' to quit\n");
+            printf( "usage:\n   enter 'p' to print blockchain\n" 
+            "   enter 'g' to generate block\n" 
+            "   enter 'v' to rehash the block and validate the block\n" 
+            "   enter 'm' to modify the data of the specific block(won't invalidate blockchain,\n"
+            "                check the hash and randomness after modification)\n" 
+            "   enter 'q' to quit\n");
             printf("-----------------------\n");
         }
 
