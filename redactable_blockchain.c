@@ -133,7 +133,6 @@ int validateByPrint(Blockchain *chain) {
     Block *current = chain->head->next;
     Block *prev = chain->head;
     while (current != NULL) {
-        calculateHash(prev);
         printf("Index: %d, ", prev->index);
         printf("Hash:     ");
         for (int i = 0; i < SHA256_DIGEST_LENGTH; i++) printf("%02x", prev->hash[i]);

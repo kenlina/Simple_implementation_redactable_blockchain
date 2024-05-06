@@ -28,7 +28,7 @@ You can also compile individual programs by specifying their corresponding targe
 $ make time_redact # measure time for redaction
 $ make time_sha256 # measure time for sha256
 $ make redact      # redactable blockchain example 
-$ make sha256      # nromal blockchain example
+$ make sha256      # normal blockchain example
 ```
 ## Running the Programs
 
@@ -51,6 +51,9 @@ Enter block message(less than 50 words): second block
 - **Print Blockchain (`p`)**: Displays all the blocks in the blockchain, showing each block's data and hash.
 ```
 Enter command: p
+```
+```
+# output
 Blockchain:
 -----------------------
 Index:    0
@@ -64,24 +67,30 @@ Timestamp:1714978364
 Data:     second block
 PrevHash: 82f3b8db79e5a73cb4ec2f32e0504bb2a3fe63a7e45508eb92caf71da421114d
 Hash:     12b44029317acd0e6e854be10b612179aef804b8fd211ef5c7de3f8dd7b834a1
-Enter command: 
 ```
 - **Verify Blockchain (`v`)**: Recomputes the hashes for all blocks to ensure that the chain's integrity is maintained. It checks if the blockchain is valid based on the current data.
 ```
 Enter command: v
+```
+```
+# output
 Index: 0, Hash:     82f3b8db79e5a73cb4ec2f32e0504bb2a3fe63a7e45508eb92caf71da421114d
 Index: 1, prevHash: 82f3b8db79e5a73cb4ec2f32e0504bb2a3fe63a7e45508eb92caf71da421114d
 -----------------------
 Blockchain validated successfully.
-Enter command: 
 ```
 - **Modify Block (`m`)**: Enables the user to alter the data of a specified block. Note that modifying a block will change its hash and may invalidate the blockchain.
 ```
 Enter command: m
 Choose the index of the block you want to modify: 0
 Enter the message you want to modify: modify block 0
+```
+```
 # try to validate blockchain after modify block 0
 Enter command: v
+```
+```
+# output
 Index: 0, Hash:     4afb832ed37d1e88ca664a8adc5e0bdfec79c0d1aaf303039f13173858a8690e
 Index: 1, prevHash: 82f3b8db79e5a73cb4ec2f32e0504bb2a3fe63a7e45508eb92caf71da421114d
 -----------------------
