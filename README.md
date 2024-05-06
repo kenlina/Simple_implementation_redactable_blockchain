@@ -101,8 +101,10 @@ Blockchain validation failed.
 - **Quit (`q`)**: Exits the blockchain application process.
 
 ## System Requirements
-Make sure to have the necessary dependencies, such as the cryptographic library (`crypto`) and the math library (`lm`), installed on your system to ensure the programs run successfully.
-
+Make sure to have the necessary dependencies, such as the cryptographic library (`crypto`), installed on your system to ensure the programs run successfully.
+```
+sudo apt install libssl-dev
+```
 ## Acknowledgments
 
 This project makes extensive use of components developed by Thiago Leucz Astrizi, found in his [blockchain_tests](https://github.com/thiagoharry/blockchain_tests) repository on GitHub. Specific files utilized include:
